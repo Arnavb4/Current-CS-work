@@ -1,0 +1,17 @@
+That code is too complex for me to understand and trace just from looking at it
+
+Here's what I recommend - add these lines:
+
+def sort_string_helper (x, y, z):
+    print("just called sort_string_helper with", x, y, z)
+    input()
+    if y == len(x):
+        return sort_string_helper2 (x, z)
+    ...etc
+Then when you run your code, you'll see that print statement happen once, 
+and then because of input(), your code will pause until you hit enter in the terminal.  
+Take a moment to think: "if my code is working, the next print statement should say ..." 
+and decide what x, y, and z you're expecting.  Then hit enter and see what you get for the next call.
+
+This has two benefits - one, you make sure you really understand the problem by making sure you know what should 
+come next, and two, you understand exactly what your code is doing and where it falls short.
